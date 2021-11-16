@@ -1,0 +1,86 @@
+1 ------
+    import math as m
+    m.factorial() m.cos()
+    from math import pi
+    type() 
+    bin() oct() hex()
+    len()
+    trys kabutes '''
+    [0] [-1] [3:4:2] [::-1]
+    str() int() ...
+    id()
+    input() eval()input input().split()
+    print(sep, end), format(), %i, lygiavimas
+    operatoriai
+    in, not in
+    math modulis
+
+    labor 1 ------
+        5 * "3"
+        h = n // 60 % 24
+        m = n % 60
+
+2 ------
+    range(start, stop, step)
+    if else
+    if in range() ...
+    __iter__(), __next__()
+    for while break continue           while else
+    pass
+    import sys sys.exit()
+
+    labor 2 ------
+        abs()
+        max() min()
+        list.remove(), list.append()
+
+3 ------
+    string
+        capitalize(), title(), lower(), upper(), swapcase()
+        isupper(), islower(), center(), ljust(), rjust()
+        split(), rsplit(), ''.join(list[]), replace()
+        isalnum(), isalpha(), isdigit(), isspace(), isdecimal()
+        strip(), lstrip(), rstrip(), count(), find(), rfind()
+        index(), rindex()
+        
+    ord(), chr()
+    in not in
+    sorted(), reversed()
+
+    labor 3 -----
+        ''.join(reversed(s))
+        del
+
+4 -----
+    f = open(filename, mode)
+    f.write(), f.close(), f.writelines()
+    f.read(n), f.readline(), f.readlines()
+    with open() as f:
+    tell(), seek()
+    os.path.isfile()
+
+5 -----
+    [1] * 10
+    list()
+    L[2:4] = [1,2]; [1:2] = 'ORANGE'; s[1:2] = ['ORANGE']
+    L.copy()
+    2 in L
+    L.append(), L.extend(), L.insert(), L.remove(), L.pop()
+    L.clear(), L.index(), L.count(), L.sort(), L.reverse()
+    zip(), map()
+    L = [x*x for x in range(5)]
+     [[0] * m] * n; dvimatis saraso sudarymas
+
+    labor 5 -----
+        type(L).__name__
+
+6 -----
+    t1 = (1, 2, 3, 'Python')
+    tuple(); t = a,b,c, []
+    a,b,c = (1,2,True)
+    A = {}; A = set()
+    A.copy(), A.add(), A.remove(), A.discard(), A.pop(),
+    A.clear(),
+    A.union(), A.intersection() intersection_update visur, A.difference(), A.symmetric_difference()
+    A.update(), A.issubset(), A.isdisjoint(), A.issuperset(),
+    {}, frozenset()
