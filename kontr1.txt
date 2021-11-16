@@ -50,6 +50,9 @@
     labor 3 -----
         ''.join(reversed(s))
         del
+        [::-1]
+        text.find('a', firstIndex + 1)
+        dict.fromkeys() = sorted
 
 4 -----
     f = open(filename, mode)
@@ -73,6 +76,8 @@
 
     labor 5 -----
         type(L).__name__
+        try except
+        list(map(int, input().split()))
 
 6 -----
     t1 = (1, 2, 3, 'Python')
@@ -84,3 +89,33 @@
     A.union(), A.intersection() intersection_update visur, A.difference(), A.symmetric_difference()
     A.update(), A.issubset(), A.isdisjoint(), A.issuperset(),
     {}, frozenset()
+
+7 -----
+    dict(), fromkeys(), dict.fromkeys()
+    dict.copy(), dict.get(), dict.items(), dict.keys(), dict.values(),
+    dict.update(), dict.keys(), dict.pop(), dict.popitem(), dict.setdefault(),
+    dict.items()
+    lambda x: x*x
+    sort(key=lambda x: x[1]) # surikiuoja pagal reikšmę
+    sorted(d.items(), key=lambda x: (x[1], x[0]))
+    sorted(d.items(), key=lambda x: (x[1], x[0]), reverse=True)
+    print(max(d, key=lambda x: d[x]))
+    sum()
+
+8 -----
+    __doc__
+    sub(a=200,b=100); sub(200,100)
+    def(a = 'asd')
+    def(*args, **kwargs)                    list(map(lambda x: int(x), input().split(',')))   lygNelyg(*inp)
+    return sum, sub, mul, div
+    globals()
+    nonlocal
+    filter()
+    (filter(lambda d: d[0]=='S', week)
+    reduce()   from functools import reduc
+
+    labor 8 ----
+        filter(lambda d: len(d) == 6, L)
+        inp = list(map(lambda x: int(x), input().split(','))) 
+        sum(list(map(lambda x: int(x), n)))
+        reduce(lambda x, y: x*y, range(1, x+1))
