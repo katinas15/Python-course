@@ -1,0 +1,28 @@
+9 ----------------------------------------------------------------
+class
+isinstance(object, class)
+__doc__
+__init__
+o.parameter
+__dict__
+
+static
+self
+@classmethod
+cls
+@staticmethod
+
+
+10 ----------------------------------------------------------------
+class derived(base)
+super()
+super().__init__()
+classname.method()
+super(B, self).method()
+class devicer(1, 2)
+__mro__
+__str__
+__add__ ...
+return Book(self.pages, other.pages); __str__. print(a + b + c)
+__private
+_protected
