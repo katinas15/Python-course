@@ -6,6 +6,7 @@ __init__
 o.parameter
 __dict__
 
+del
 static
 self
 @classmethod
