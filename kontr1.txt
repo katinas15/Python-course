@@ -4,19 +4,31 @@
     from math import pi
     type() 
     bin() oct() hex()
+    0b111
+    0o3123
+    0x1233
+
     len()
     trys kabutes '''
-    [0] [-1] [3:4:2] [::-1]
+    [0] - pirmas
+    [-1] - paskutinis 
+    [2:7] - nuo antro iki septinto
+    [:5] - nuo nulio iki 5
+    [6:] = nuo sesto
+    [-5:] - paskutiniai penki
+    [3:4:2] [::-1]
     str() int() ...
     id()
+    is/is not (operator) - ar tas pats atminties adresas
     input() eval()input input().split()
-    print(sep, end), format(), %i, lygiavimas
-    operatoriai
+    print(sep, end), {0:<15f}".format(kint), %i, lygiavimas
+    print(' %5i %5i %9i' %(25, y, 35))
+    operatoriai, "//" - divide and floor
     in, not in
     math modulis
 
     labor 1 ------
-        5 * "3"
+        5 * "*"
         h = n // 60 % 24
         m = n % 60
 
@@ -24,8 +36,10 @@
     range(start, stop, step)
     if else
     if in range() ...
-    __iter__(), __next__()
-    for while break continue           while else
+    b = a.__iter__(), b.__next__()
+
+    for i in 1, 10, 25, 0, -2:
+    for while break continue           while else - kai break
     pass
     import sys sys.exit()
 
@@ -38,14 +52,20 @@
     string
         capitalize(), title(), lower(), upper(), swapcase()
         isupper(), islower(), center(), ljust(), rjust()
-        split(), rsplit(), ''.join(list[]), replace()
+        split(maxsplit=2), rsplit(maxsplit=2), ''.join(list[]), replace()
         isalnum(), isalpha(), isdigit(), isspace(), isdecimal()
-        strip(), lstrip(), rstrip(), count(), find(), rfind()
-        index(), rindex()
+        strip(), lstrip(), rstrip(), count('find', start, stop), 
+        find('find', start, stop), rfind(), index('find', start, stop), 
+        rindex()
+        
+    str.count(sub[,start[,stop]])
+    str.find(sub[, start[, stop]]) –
+    str.index(sub[, start[, stop]])
+    split(maxsplit=2)
         
     ord(), chr()
     in not in
-    sorted(), reversed()
+    sorted(), reversed() - grazina array
 
     labor 3 -----
         ''.join(reversed(s))
@@ -53,26 +73,33 @@
         [::-1]
         text.find('a', firstIndex + 1)
         dict.fromkeys() = sorted
+        enumerate()
 
 4 -----
     f = open(filename, mode)
     f.write(), f.close(), f.writelines()
     f.read(n), f.readline(), f.readlines()
     with open() as f:
-    tell(), seek()
-    os.path.isfile()
+    tell() - cursor pozicija, 
+    seek(n) - perkelia kursoriu i nurodyta poz
+    os.path.isfile() - ar failas egzistuoja
 
 5 -----
     [1] * 10
     list()
-    L[2:4] = [1,2]; [1:2] = 'ORANGE'; s[1:2] = ['ORANGE']
-    L.copy()
+    L[2:4] = [1,2]; 
+    [1:2] = 'ORANGE' - ides kaip array i ta vieta
+    s[1:2] = ['ORANGE'] - ides orange
+    palyginimas vyksta nuo pirmo elemento ir t.t.
+    L.copy(), L[:] - irgi kopija
     2 in L
-    L.append(), L.extend(), L.insert(), L.remove(), L.pop()
-    L.clear(), L.index(), L.count(), L.sort(), L.reverse()
-    zip(), map()
+    L.append(x), L.extend(list), L.insert(i, x), L.remove(x), L.pop(),
+    L.pop(i),
+    L.clear(), L.index(x), L.count(x), L.sort(), L.reverse()
+    zip(L1, L2), map(func, obj)
     L = [x*x for x in range(5)]
-     [[0] * m] * n; dvimatis saraso sudarymas
+    [x for x in range(18) if x % 3 == 0]
+    [[0] * m] * n; dvimatis saraso sudarymas
 
     labor 5 -----
         type(L).__name__
@@ -80,39 +107,134 @@
         list(map(int, input().split()))
 
 6 -----
-    t1 = (1, 2, 3, 'Python')
+    t1 = (1, 2, 3, 'Python') - nekinta, nebent viduj yra list
+    t2 = (1,) - vieno elemento tuple
     tuple(); t = a,b,c, []
     a,b,c = (1,2,True)
-    A = {}; A = set()
-    A.copy(), A.add(), A.remove(), A.discard(), A.pop(),
+    palyginimas prasideda nuo pirmo ir t.t.
+    sorted(t, reverse=True)
+    (n*n for n in range(1,5))
+    galima paversti list
+
+    A = {}; A = set() - set yra unikalios reiksmes, nera indeksuojami
+    list galima paversti set
+    A.copy(), A.add(x), 
+    A.discard(x), 
+    A.remove(x) - jei nera ismes error,
+    A.pop() - atsitiktini,
     A.clear(),
-    A.union(), A.intersection() intersection_update visur, A.difference(), A.symmetric_difference()
-    A.update(), A.issubset(), A.isdisjoint(), A.issuperset(),
+    A.union(), A.intersection(), 
+    intersection_update(set1, set2,...), - mutates current
+    A.difference(setTikrina, set1, set2,...) - viskas kas yra tik pirmam,
+    A.difference_update(setTikrina, set1, set2,..)
+    A.symmetric_difference() - atskirus, 
+    set.symmetric_difference_update
+    A.update(set1, set2, ...), A.issubset(), 
+    A.isdisjoint(), 
+    set.issubset(x)
+    A.issuperset(),
     {}, frozenset()
+    fA = frozenset(A)
 
 7 -----
+    key - value, indeksuojami raktais
+    d1 = {1:'a', 2:'b', 3:'c'}
+    d1 = dict( [['a','b'], ['c','d']]  = {'a':'b', 'c':'d'}
+    d1 = dict(zip(['a','b'], ['c','d']))
+    d1 = dict(a=1, b=2, c=3)
+
     dict(), fromkeys(), dict.fromkeys()
-    dict.copy(), dict.get(), dict.items(), dict.keys(), dict.values(),
-    dict.update(), dict.keys(), dict.pop(), dict.popitem(), dict.setdefault(),
-    dict.items()
+    dict.fromkeys([1,1,2,2,3],100) - {1: 100, 2: 100, 3: 100}
+    default yra None
+    d['one']
+    del d['one']
+
+    dict.copy(), 
+    dict.get(key, x) - jei nera grazina None arba x, 
+    ERROR print(coord[w]) - jei nera
+    dict.setdefault(key, x),- tam raktui, jei nera reiksmes None
+    dict.pop(key, x) - jei nera isveda x and error
+    dict.popitem() - paskutine arba klaida
+    dict.items(), dict.keys(), 
+    dict.values(), dict.update(), dict.keys(), 
+    dict.items() - key,value
+
+    L = list(d.items()) - [(key, value)]
+
+    dict.sort() - neveiks nes cia list metodas
     lambda x: x*x
-    sort(key=lambda x: x[1]) # surikiuoja pagal reikšmę
-    sorted(d.items(), key=lambda x: (x[1], x[0]))
-    sorted(d.items(), key=lambda x: (x[1], x[0]), reverse=True)
+
+    maxx = lambda x,y: x if x > y else y
+    print(maxx(10,100))
+    print(list(map(lambda x : x**0.5, [1, 2, 3, 4])))
+    List = list(map(lambda x,y: x+y, L1, L2))  - [5,7]
+
+*********************
+    L.sort() - pagal rakta
+    L.sort(key=lambda x: x[1]) # surikiuoja pagal reikšmę (antra reiksme)
+    sorted(d.items(), key=lambda x: (x[1], -x[0])) - Surikiuoja pagal reikšmę ir po to pagal raktą.
+    sorted(d.items(), key=lambda x: (x[1], x[0]), reverse=True) - surikiuoja pagal reikšmę ir pagal raktą mažėjimo tvarka
     print(max(d, key=lambda x: d[x]))
     sum()
 
+    A_B = {*A, *B}
+    t4 = (*t1, *t2)
+    L4 = [*L1, *L2]
+    d = {**d1, **d2}
+
 8 -----
+    ```asdasd ```
     __doc__
-    sub(a=200,b=100); sub(200,100)
+    def sub(a,b)
+    sub(a=200,b=100)
+    sub(b=100,a=200)#jeigu abu argumentai yra vardiniai, tvarka nėra svarbi
+    sub(200, b=100)#pirmas argumentas yra pozicinis, antras – vardinis
+    sub(200,100)
+    ERROR sub(a=200, 100)# pozicinis argumentas turi būti rašomas prieš vardinį
+    ERROR sub(100, a=200)#parametro a reikšmė suteikta kelis kartus
+
+
     def(a = 'asd')
-    def(*args, **kwargs)                    list(map(lambda x: int(x), input().split(',')))   lygNelyg(*inp)
-    return sum, sub, mul, div
+    def(*args, **kwargs)        list(map(lambda x: int(x), input().split(',')))   lygNelyg(*inp)
+
+
+    def func(*n): - kiek nori
+    func(1,2,3)
+
+    def f(x, *y):
+
+    def f(*x, y):  - po kintamo ilgio tik vardinis
+    f(10,20,30,y=40)
+
+    def func(a=5, *t, **d):  - d yra vardinis kintamo ilgio
+    func(10, 1, 2, 3, name='John', job='clerk')
+
+    def func(a=5, *t, b, **d):
+    func(10, 1, 2, 3, b=20, name='John', job='clerk')
+    ERROR func(a=10, 1, 2, 3, b=20, name='John', job='clerk')
+
+    return sum, sub, mul, div  - grazins tuple
+    sum,sub,mul,div = calc(5.5, 2)#rinkinio išpakavimas
+
     globals()
+
+    def func():
+        global x
+
+    def inner_f():
+        nonlocal x
+
+    def f(List):
+        List[i] *= i #pakeičią globalų sąrašą L
+
     nonlocal
     filter()
+
+    week = ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday']
     (filter(lambda d: d[0]=='S', week)
-    reduce()   from functools import reduc
+
+    reduce()   from functools import reduce
+    reduce(lambda x, y: x*y, range(1,n+1))#faktorialas
 
     labor 8 ----
         filter(lambda d: len(d) == 6, L)

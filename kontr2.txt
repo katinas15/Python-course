@@ -1,29 +1,114 @@
 9 ----------------------------------------------------------------
-class
+class Class_name:
+c = Class_name()
 isinstance(object, class)
+
+class Test:
+    def __init__(self, m, ats):
+        self.miestas = m #objekto atributo inicializavimas
+        self.atstumas = ats #objekto atributo inicializavimas
+m1 = LT_miestai('Akmenė', 274)#objektas m1
+
 __doc__
 __init__
 o.parameter
 __dict__
 
-del
+del t.b
+
+class Test:
+    a = 'static'
 static
 self
 @classmethod
-cls
-@staticmethod
+
+class Test:
+ 
+    @classmethod - visiems egzemplioriams
+    def c_method(cls):
+        cls.a = 'Statinis kintamasis'
+
+class Test:
+    @staticmethod
+    def s_method():
+        Test.a = 'Statinis kintamasis'
+
+
+Test.a
+
+
 
 
 10 ----------------------------------------------------------------
 class derived(base)
 super()
 super().__init__()
+Tree.__init__(self, kind, height)#parametras self yra būtinas
+super().__init__(kind, height)#parametro self įtraukti nereikia
+super().a - statiniai kint
+super().m3()
+super().m1()#metodas super() kvies D klasės metodą m1
+
 classname.method()
+class Derived(Base_1, Base_2):
 super(B, self).method()
 class devicer(1, 2)
+d.mro()
 __mro__
 __str__
+D.__mro__
+def __str__(self):
+    return 'Name: {}\nMark: {}\n'.format(self.name, self.mark)
 __add__ ...
+
+def __init__(self, name = None):
+    self.name = name
+
+class A:
+    def info(self):
+        print('Klasės A metodas info')
+class B(A):
+    def info(self):
+        print('Klasės B metodas info')
+
 return Book(self.pages, other.pages); __str__. print(a + b + c)
 __private
 _protected
+
+11----------------------------------------------------------------
+np.arange(start,stop,step,dtype=None)
+ones(shape,dtype=float,order='C')
+eye(N, M=None, k=0, dtype=float, order='C')
+linspace(start, stop, num=50, endpoint=True, retstep=False, dtype=None)
+diag()
+tri()
+triu()
+tril()
+reshape(a, newshape, order='C')
+ravel(a, order='C')
+print(np.delete(a,[1,5,9]))
+insert(a, whereobj, values, axis=None)
+print(a[1:,1:3])#išveda 2,3 eilutes ir 2,3 stulpelius
+
+
+12--------------------
+a.flat
+np.nditer(a)
+for i in np.nditer(a,op_flags=['readwrite']):
+vectorize()
+where(condition, x, y)
+linalg.solve
+
+
+13-----------------
+weight = np.array([81.5,51,70.2,52])
+arr_type = [('name', 'U10'),('age', 'i4'),('weight', 'f8')]
+argsort(a, axis=-1, kind='quicksort', order=None)
+
+partition(a, kth, axis=-1, kind='introselect', order=None)
+Funkcija grąžina originalaus masyvo kopiją, kurios elementai yra padalinti pagal nurodytą vertę.
+
+
+
+
+
